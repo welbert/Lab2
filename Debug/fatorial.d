@@ -1,0 +1,1 @@
+fatorial.d: ../fatorial.c
