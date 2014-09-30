@@ -6,12 +6,16 @@
 
 int main(){
 	int n,npeso,nitem,j,i,aux1,aux2;
-	int vet[max][max],vpeso[max],vvalor[max];
+	int** vet,vpeso[max],vvalor[max];
 
 
 
 	while (scanf("%d",&npeso)!=EOF){
 		scanf("%d",&nitem);
+
+		vet = (int**)malloc(nitem*sizeof(int*));
+		for(i=0;i<nitem;i++)
+			vet[i]=(int*)malloc(npeso*sizeof(int));
 
 		for(j=0;i<npeso;j++){
 			for(i=0;i<nitem;i++){
