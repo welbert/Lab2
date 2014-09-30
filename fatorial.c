@@ -53,7 +53,7 @@ int fatorial (int n)
         return n;
     return (fatorial(n+1)%10) * (n%10);
 }
-
+/*
 int main(int argc, char **argv) {
 	int instancia=1,i;
 	long int saida;
@@ -71,4 +71,4 @@ int main(int argc, char **argv) {
 		instancia++;
 	}
 	return EXIT_SUCCESS;
-}
+}*/
