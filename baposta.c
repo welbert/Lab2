@@ -1,37 +1,30 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-#define max 10000
-/*
+typedef unsigned int ui;
+
 int main(){
 
-	int n,i,a,best,achou;
-	int vaposta[max];
-	while (scanf("%d",&n)!=EOF){
-		n = abs(n);
-		if(n<=max && n!=0){
-			best=0;
-			for(i=0;i<n;i++){
-				scanf("%d",&a);
-				if(a>=-10000 && a<=10000)
-					vaposta[i] = a;
-				else
-					break;
-			}
+	int i,aux;
+	ui n;
+	long somatotal,increment;
 
-
-
-			if(best>=0 && achou==1){
-				printf("The maximum winning streak is %d.\n",best);
-			}else{
-				printf("Losing streak.\n");
-			}
-
-		}else if(n==0){
+	while(scanf("%u",&n)){
+		if(n==0)
 			break;
+		somatotal=0;increment=0;
+		for(i=0;i<n;i++){
+			scanf("%d",&aux);
+			increment = (increment+aux>=0 ? increment+aux : 0);
+			if(increment > somatotal)
+				somatotal = increment;
 		}
 
+		if(somatotal > 0)
+			printf("The maximum winning streak is %u.\n",somatotal);
+		else
+			printf("Losing streak.\n");
 	}
+
 	return EXIT_SUCCESS;
 }
-*/
