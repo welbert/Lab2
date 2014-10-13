@@ -15,6 +15,10 @@ typedef long long ll;
 #define MAX 1
 
 //------------------------
+//VARIAVEIS GLOBAIS-------
+
+
+//------------------------
 
 //Funtions----------------
 
